@@ -1,5 +1,6 @@
 ---
-const { title = "Punto de Venta" } = Astro.props;
+const { title = "Navarro POS" } = Astro.props;
+import "../styles/global.css";
 ---
 <!DOCTYPE html>
 <html lang="es">
@@ -7,8 +8,12 @@ const { title = "Punto de Venta" } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <meta
+      name="description"
+      content="Punto de venta para tiendas de abarrotes. Controla ventas, inventario, cajas y reparaciones con Navarro POS."
+    />
   </head>
-  <body>
+  <body class="bg-gray-50 text-gray-800">
     <slot />
   </body>
 </html>

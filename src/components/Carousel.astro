@@ -1,0 +1,82 @@
+<section class="bg-gray-50 py-16">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <h2 class="text-3xl font-bold text-center mb-4">
+      Conoce el Punto de Venta en acción
+    </h2>
+
+    <p class="text-center text-gray-600 mb-10">
+      Interfaz clara, rápida y pensada para el trabajo diario
+    </p>
+
+    <!-- CONTENEDOR RELATIVO (CLAVE) -->
+    <div class="relative overflow-hidden rounded-xl shadow-xl bg-gray-100">
+
+      <!-- CARRUSEL -->
+      <div
+        id="carousel"
+        class="flex transition-transform duration-500"
+      >
+        <img
+          src="/pos/NAVARRO_POS_1.png"
+          class="w-full h-[280px] md:h-[420px] object-contain bg-white p-4 md:p-6 flex-shrink-0 rounded-lg shadow-md border"
+        />
+
+        <img
+          src="/pos/NAVARRO_POS_2.png"
+          class="w-full h-[280px] md:h-[420px] object-contain bg-white p-4 md:p-6 flex-shrink-0 rounded-lg shadow-md border"
+        />
+
+        <img
+          src="/pos/NAVARRO_POS_3.png"
+          class="w-full h-[280px] md:h-[420px] object-contain bg-white p-4 md:p-6 flex-shrink-0 rounded-lg shadow-md border"
+        />
+
+        <img
+          src="/pos/NAVARRO_POS_1.png"
+          class="w-full h-[280px] md:h-[420px] object-contain bg-white p-4 md:p-6 flex-shrink-0 rounded-lg shadow-md border"
+        />
+      </div>
+
+      <!-- BOTÓN IZQUIERDO -->
+      <button
+        onclick="window.prevSlide()"
+        class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow px-3 py-2 rounded-full text-xl"
+      >
+        ‹
+      </button>
+
+      <!-- BOTÓN DERECHO -->
+      <button
+        onclick="window.nextSlide()"
+        class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow px-3 py-2 rounded-full text-xl"
+      >
+        ›
+      </button>
+
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+      let index = 0;
+      const carousel = document.getElementById("carousel");
+      const total = carousel.children.length;
+
+      function update() {
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      window.nextSlide = () => {
+        index = (index + 1) % total;
+        update();
+      };
+
+      window.prevSlide = () => {
+        index = (index - 1 + total) % total;
+        update();
+      };
+    });
+  </script>
+</section>
