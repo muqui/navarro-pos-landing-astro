@@ -164,16 +164,59 @@ import MainLayout from "../layouts/MainLayout.astro";
         Prueba el módulo de reparaciones en tu taller
       </h2>
 
-        <a
-  href="https://github.com/muqui/punto_venta_abarrotes/releases/download/demo/navarro-pos-demo.exe"
-  download
+       <!-- Botón -->
+<button
+  id="downloadBtn"
   class="inline-block bg-green-500 hover:bg-green-600
          px-5 py-3 text-base
          md:px-8 md:py-4 md:text-lg
          rounded-lg font-semibold transition"
 >
   Descarga y prueba Navarro POS
-</a>
+</button>
+
+<!-- Modal -->
+<div
+  id="megaModal"
+  class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50"
+>
+  <div class="bg-white p-6 rounded-lg max-w-sm text-center">
+    <p class="mb-4 text-gray-800">
+      Serás redirigido a Mega para descargar el archivo seguro.
+    </p>
+
+    <a
+      href="https://mega.nz/file/KMMVRbDD#bJKN11_LeC07yGK4Dyi3yvH_kP7qDsMLJv7BnHWvo1k"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-block bg-green-500 hover:bg-green-600 px-5 py-2 rounded-lg font-semibold text-white"
+    >
+      Continuar a Mega
+    </a>
+
+    <button
+      id="cancelDownload"
+      class="block mt-4 text-gray-500 hover:text-gray-700 mx-auto"
+    >
+      Cancelar
+    </button>
+  </div>
+</div>
+
+<!-- Script Astro -->
+<script is:inline>
+  const downloadBtn = document.getElementById('downloadBtn');
+  const megaModal = document.getElementById('megaModal');
+  const cancelBtn = document.getElementById('cancelDownload');
+
+  downloadBtn?.addEventListener('click', () => {
+    megaModal.classList.remove('hidden');
+  });
+
+  cancelBtn?.addEventListener('click', () => {
+    megaModal.classList.add('hidden');
+  });
+</script>
     </section>
 
   </main>
