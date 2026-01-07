@@ -1,0 +1,35 @@
+---
+const {
+  title = "Navarro POS | Punto de Venta para Abarrotes y Talleres de Reparación",
+  description = "Navarro POS es un sistema de punto de venta para tiendas de abarrotes y talleres de reparación. Controla ventas, inventario, caja y reparaciones fácilmente.",
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- SEO básico -->
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={Astro.url.href} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:image" content="/og-image.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+
+  <body>
+    <slot />
+  </body>
+</html>
