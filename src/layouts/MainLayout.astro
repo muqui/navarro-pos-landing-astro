@@ -1,19 +1,34 @@
 ---
-const { title = "Navarro POS" } = Astro.props;
-import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import '../styles/global.css';
+
+const {
+  title = "Navarro POS | Punto de Venta",
+  description = "Navarro POS es un sistema de punto de venta para tiendas de abarrotes y talleres de reparación."
+} = Astro.props;
 ---
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
-    <meta
-      name="description"
-      content="Punto de venta para tiendas de abarrotes. Controla ventas, inventario, cajas y reparaciones con Navarro POS."
-    />
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.ico" />
   </head>
+
   <body class="bg-gray-50 text-gray-800">
-    <slot />
+    <!-- Navbar siempre visible -->
+    <Navbar />
+
+    <!-- Contenido específico de cada página -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- Footer opcional -->
+    <Footer />
   </body>
 </html>

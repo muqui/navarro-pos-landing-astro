@@ -1,32 +1,180 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+
 ---
 
-<BaseLayout
-  title="Sistema de Reparaciones para Talleres de Celulares | Navarro POS"
-  description="Administra órdenes de reparación, estados, costos y ganancias con el módulo de reparaciones de Navarro POS."
+<MainLayout
+  title="Módulo de Reparaciones para Talleres de Celulares y Electrónicos | Navarro POS"
+  description="Registra órdenes de reparación, controla presupuestos, refacciones y permite a tus clientes consultar el estado de su equipo en línea con Navarro POS."
 >
-  <main class="py-20">
-    <div class="max-w-4xl mx-auto px-6">
-      <h1 class="text-4xl font-bold mb-6">
-        Sistema de Reparaciones para Talleres de Celulares
-      </h1>
+  <main>
 
-      <p class="text-lg text-gray-600 mb-8">
-        Lleva el control completo de reparaciones, desde la recepción hasta la entrega.
-      </p>
+    <!-- HERO -->
+    <section class="py-20 bg-indigo-700 text-white">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h1 class="text-4xl font-bold mb-6">
+          Módulo de Reparaciones para Talleres de Celulares
+        </h1>
 
-      <h2 class="text-2xl font-bold mt-10 mb-4">
-        Funciones del módulo de reparaciones
+        <p class="text-xl text-indigo-100 max-w-3xl mx-auto">
+          Administra órdenes de servicio, controla costos y permite que tus clientes
+          consulten en línea el estado de su reparación.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROBLEMA / SOLUCIÓN -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-6">
+          Control total de tus reparaciones
+        </h2>
+
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Deja atrás las libretas y mensajes desordenados. Con el módulo de reparaciones
+          de Navarro POS puedes centralizar toda la información de cada equipo desde su
+          ingreso hasta su entrega final.
+        </p>
+      </div>
+    </section>
+
+    <!-- REGISTRO DE ÓRDENES -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">
+          Registro completo de órdenes de reparación
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-10 text-lg text-gray-700">
+
+          <!-- Columna izquierda -->
+          <ul class="space-y-4">
+            <li class="flex gap-3 items-start">
+              <svg class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Nombre del cliente</span>
+            </li>
+
+            <li class="flex gap-3 items-start">
+              <svg class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Teléfono y correo electrónico</span>
+            </li>
+
+            <li class="flex gap-3 items-start">
+              <svg class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Marca y modelo del equipo</span>
+            </li>
+
+            <li class="flex gap-3 items-start">
+              <svg class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>IMEI u otro identificador</span>
+            </li>
+
+            <li class="flex gap-3 items-start">
+              <svg class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Falla a reparar</span>
+            </li>
+
+            <li class="flex gap-3 items-start">
+              <svg class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Estado en que se recibe el equipo</span>
+            </li>
+          </ul>
+
+          <!-- Columna derecha -->
+          <ul class="space-y-4">
+            <li class="flex gap-3 items-start">
+              <svg class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Presupuesto de la reparación</span>
+            </li>
+
+            <li class="flex gap-3 items-start">
+              <svg class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Abono inicial</span>
+            </li>
+
+            <li class="flex gap-3 items-start">
+              <svg class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Restante por pagar</span>
+            </li>
+
+            <li class="flex gap-3 items-start">
+              <svg class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Contraseña del equipo (si aplica)</span>
+            </li>
+
+            <li class="flex gap-3 items-start">
+              <svg class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Notas adicionales</span>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTADOS -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-6">
+          Estados de reparación y seguimiento en línea
+        </h2>
+
+        <ul class="grid sm:grid-cols-2 gap-4 text-lg text-gray-700">
+          <li class="flex gap-3 items-center">
+            <span class="w-3 h-3 rounded-full bg-yellow-500"></span> Pendiente
+          </li>
+          <li class="flex gap-3 items-center">
+            <span class="w-3 h-3 rounded-full bg-blue-500"></span> En revisión
+          </li>
+          <li class="flex gap-3 items-center">
+            <span class="w-3 h-3 rounded-full bg-green-600"></span> Reparado
+          </li>
+          <li class="flex gap-3 items-center">
+            <span class="w-3 h-3 rounded-full bg-gray-600"></span> Entregado
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-indigo-700 text-white text-center">
+      <h2 class="text-3xl font-bold mb-6">
+        Prueba el módulo de reparaciones en tu taller
       </h2>
 
-      <ul class="space-y-3">
-        <li>✔ Registro de órdenes de reparación</li>
-        <li>✔ Estados: en revisión, en reparación, listo</li>
-        <li>✔ Control de costos y ganancias</li>
-        <li>✔ Historial por cliente</li>
-        <li>✔ Filtros por fecha</li>
-      </ul>
-    </div>
+        <a
+  href="https://github.com/muqui/punto-venta-javaFX/releases/download/java/navarro-pos-demo.exe"
+  download
+  class="inline-block bg-green-500 hover:bg-green-600
+         px-5 py-3 text-base
+         md:px-8 md:py-4 md:text-lg
+         rounded-lg font-semibold transition"
+>
+  Descarga y prueba Navarro POS
+</a>
+    </section>
+
   </main>
-</BaseLayout>
+</MainLayout>
